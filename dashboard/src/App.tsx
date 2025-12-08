@@ -23,7 +23,11 @@ interface TaskFormState {
 // In a larger app we would usually move API logic into a separate module.
 // For this small learning project we keep it in the same file so you can
 // see everything in one place.
-const API_BASE_URL = 'http://127.0.0.1:8000'
+//
+// In production (e.g. Vercel), we read the backend URL from VITE_API_URL.
+// Locally, we fall back to the FastAPI dev server on 127.0.0.1:8000.
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8000'
 
 function App() {
   // All tasks currently loaded from the backend

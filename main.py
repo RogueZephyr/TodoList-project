@@ -18,10 +18,15 @@ console = Console()
 # FastAPI app
 api = FastAPI()
 
-# CORS for React dev server
+# CORS for React dev server and deployed Vercel frontend.
+# TODO: replace the placeholder URL below with your real Vercel URL,
+# e.g. "https://your-todo-dashboard.vercel.app".
 api.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",  # Vite dev server
+        "https://your-vercel-app-url.vercel.app",  # Vercel production frontend (placeholder)
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
