@@ -10,6 +10,7 @@ keyboard==0.13.5
 markdown-it-py==4.0.0
 mdurl==0.1.2
 numpy==2.3.5
+uvicorn
 pandas==2.3.3
 prettytable==3.17.0
 pychalk==2.0.1
