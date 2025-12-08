@@ -25,7 +25,7 @@ api.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",  # Vite dev server
-        "https://your-vercel-app-url.vercel.app",  # Vercel production frontend (placeholder)
+        "https://todo-list-project-ivory.vercel.app/",  # Vercel production frontend (placeholder)
     ],
     allow_credentials=True,
     allow_methods=["*"],
